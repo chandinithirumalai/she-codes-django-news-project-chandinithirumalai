@@ -1,0 +1,32 @@
+{% extends "base.html"%}
+{% block content%}
+
+<form action="" method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" value="submit">
+
+</form> 
+
+<!-- <form action="https://formspree.io/f/xeqdzjzk" method="">
+    <div class="form-item"> 
+        <label for="name">Title</label>
+        <input type="text" id="name" name="name">    
+    </div>   
+    <div class="form-item">
+        <label for="pub_date">Published Date</label>   
+        <input type="date" id="pub_date" name="pub_date">    
+    </div>
+    <div class="form-item">
+        <label for="image_url">Image URL</label>   
+        <input type="text" id="image_url" name="image_url">    
+    </div>
+    <div class="form-item">        
+        <label for="message">content</label>  
+        <textarea id="message" name="message"></textarea>    
+    </div>
+    <div class="form-item">        
+        <button type="submit">Submit!</a></button>    
+    </div>
+</form> -->
+{% endblock %}

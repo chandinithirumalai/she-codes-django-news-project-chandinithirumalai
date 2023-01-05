@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2> {{customuser.username}}</h2>
+<h2>{{customuser.email}}</h2>
+<h2> {{customuser.user_stories}}</h2>
+
+
+<!-- option to change username and password and optional:add profile image -->
+
+
+<div>
+    <h2>My Posts</h2>
+<div id="user_stories">
+    {% if user_stories %}
+        {% for story in user_stories %}
+            {% include "news/storyCard.html" with story=story position=forloop.counter %}
+        {% endfor %}
+    {% else %}
+        <p>No stories are available.</p>
+    {% endif %}
+</div>
+</div>
+{% endblock %}
+
